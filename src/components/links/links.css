@@ -1,0 +1,13 @@
+.links {
+    margin-top: 1.875rem;
+    margin-left: 10.4%;
+}
+
+.link {
+    font-size: .75rem;
+    line-height: 1.08rem;
+}
+
+.link:not(:first-of-type) {
+    margin-left: 2.5rem;
+}
