@@ -6,6 +6,7 @@ import App from './components/app/app';
 import OurCoffee from './components/ourCoffee/ourCoffee';
 import ForPleasure from './components/forPleasure/forPleasure';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 createRoot(document.getElementById('root')).render(

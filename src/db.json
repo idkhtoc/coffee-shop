@@ -1,0 +1,7 @@
+{
+    "items" : [
+        {"name": "Solimo Coffee Beans", "src": "./images/goods/good1.png", "price": 10.73, "weight": 2, "best": true, "id": 1},
+        {"name": "Presto Coffee Beans", "src": "./images/goods/good2.png", "price": 15.99, "weight": 1, "best": true, "id": 2},
+        {"name": "AROMISTICO Coffee ", "src": "./images/goods/good3.png", "price": 6.99, "weight": 1, "best": true, "id": 3}
+    ]
+}

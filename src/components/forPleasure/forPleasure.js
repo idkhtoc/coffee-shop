@@ -7,8 +7,7 @@ const ForPleasure = () => {
                 <Links color="white"/>
             </header>
             <main>
-                <section className="about-goods"></section>
-                <section className="goods"></section>
+                
             </main>
             <footer></footer>
         </div>

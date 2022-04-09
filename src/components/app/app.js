@@ -1,27 +1,23 @@
-import { Component } from "react";
+import styled from "styled-components";
 
-import Links from "../links/links";
+import AppHeader from "./appComponents/appHeader";
+import AppMain from "./appComponents/appMain";
+import Footer from "../footer/footer";
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+const AppWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+`;
 
-    render() {
-        return (
-            <div className="app">
-                <header>
-                    <Links color="white" />
-                </header>
-                <main>
-                    <section className="about-us"></section>
-                    <section className="our-best"></section>
-                </main>
-                <footer></footer>
-            </div>
-        );
-    }
+const App = () => {
+    return (
+        <AppWrapper>
+            <AppHeader/>
+            <AppMain/>
+            <Footer/>
+        </AppWrapper>
+    );
 }
 
 export default App;

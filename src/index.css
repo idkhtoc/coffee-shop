@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Maerienda', cursive;
     font-weight: 400;
+    vertical-align: none;
 }
