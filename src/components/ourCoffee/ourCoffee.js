@@ -19,9 +19,9 @@ const OurCoffee = () => {
     met spot shy want. Children me laughing we prospect answered followed. At it went
     is song that held help face.`;
 
-    const infoImgSrc = "../../images/our-coffee3-main-info.png";
+    const infoImgSrc = "../../images/our-coffee-main-info.png";
 
-    const infoTitle = "About our beans"
+    const infoTitle = "About our beans";
 
     return (
         <OurCoffeeWrapper>
