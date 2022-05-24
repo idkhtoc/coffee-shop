@@ -1,8 +1,14 @@
-import './separatorLine.css';
+import styled from "styled-components";
 
-const SeparatorLine = () => {
+const LineHr = styled.hr`
+    color: ${props => props.color};
+    width: 240px;
+    margin: ${props => props.margin};
+`;
+
+const SeparatorLine = ({color, margin}) => {
     return (
-        <hr className='separator-line'/>
+        <LineHr color={color} margin={margin} />
     );
 };
 

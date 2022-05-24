@@ -1,7 +1,97 @@
 {
     "items" : [
-        {"name": "Solimo Coffee Beans", "src": "./images/goods/good1.png", "price": 10.73, "weight": 2, "best": true, "id": 1},
-        {"name": "Presto Coffee Beans", "src": "./images/goods/good2.png", "price": 15.99, "weight": 1, "best": true, "id": 2},
-        {"name": "AROMISTICO Coffee ", "src": "./images/goods/good3.png", "price": 6.99, "weight": 1, "best": true, "id": 3}
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2,
+            "country": "Brazil",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "best": false, 
+            "id": 1
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2,
+            "country": "Brazil", 
+            "best": false, 
+            "id": 2
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": false, 
+            "id": 3
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2,
+            "country": "Kenya",
+            "description": "AsodadsdakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxsakdopppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppS",
+            "best": false, 
+            "id": 4
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2,
+            "country": "Brazil", 
+            "best": false, 
+            "id": 5
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": false, 
+            "id": 6
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2,
+            "country": "Brazil",
+            "description": "AsodadsdakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxsakdopppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppS",
+            "best": false, 
+            "id": 7
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2,
+            "country": "Brazil", 
+            "best": false, 
+            "id": 8
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": false, 
+            "id": 9
+        }
     ]
 }

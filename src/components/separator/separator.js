@@ -22,7 +22,7 @@ const Separator = ({color, margin}) => {
     return (
         <SeparatorWrapper margin={margin}>
             <SeparatorLine color={color} />
-            <SeparatorLogo src={`./images/separator-logo-${color}.svg`} alt="logo" />
+            <SeparatorLogo src={`../../images/separator-logo-${color}.svg`} alt="logo" />
             <SeparatorLine color={color} />
         </SeparatorWrapper>
     );

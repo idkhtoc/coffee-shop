@@ -12,21 +12,41 @@ const LinksLink = styled(Link)`
     font-size: .75rem;
     line-height: 1.0625rem;
     text-decoration: none;
+    transition: opacity .15s ease;
     &:not(:first-of-type) {
         margin-left: 40px;
     }
-    &:hover {
+    &:hover, &.active {
         color: ${props => props.color};
+        opacity: .5;
     }
 `;
 
-const Links = ({color, margin}) => {
+const Links = ({margin, color}) => {
+    const activeLink = window.location.pathname;
+    
+    const links = [
+        {to: '/', text: 'Coffee house'},
+        {to: '/ourcoffee', text: 'Our coffee'},
+        {to: '/forpleasure', text: 'For your pleasure'}
+    ];
+
     return (
         <LinksWrapper margin={margin}>
-            <img src={`./images/logo-${color}.svg`} alt="logo" /> 
-            <LinksLink to="/" color={color}>Coffee house</LinksLink>
-            <LinksLink to="/ourcoffee" color={color}>Our coffee</LinksLink>
-            <LinksLink to="/forpleasure" color={color}>For your pleasure</LinksLink>
+            <img src={`../../images/logo-${color}.svg`} alt="logo" /> 
+            {
+                links.map(link => (
+                    <LinksLink 
+                        to={link.to} 
+                        color={color}
+                        className={activeLink === link.to ? 'active' : ''}
+                        key={link.to}
+                        onClick={() => {document.documentElement.getBoundingClientRect().top = 0}}
+                    >
+                        {link.text}
+                    </LinksLink>
+                ))
+            }
         </LinksWrapper>
     );
 }

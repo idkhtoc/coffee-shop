@@ -80,15 +80,22 @@ class OurBestGoods extends Component {
         return elements;
     }
 
+    onCarouselSelect = activeIndex => {
+        this.setState({activeIndex});
+    }
+
     render() {
-        const {loading, error} = this.state;
+        const {loading, error, activeIndex} = this.state;
+        const goods = this.renderItems();
 
         return loading ? <Phrase>Loading...</Phrase> : 
-               (error ? <Phrase>Some problems you have</Phrase> : (
-            <GoodsWrapper variant="dark">
-                {this.renderItems()}
+               error ? <Phrase>Some problems you have</Phrase> : 
+               !goods.join('') ? <Phrase>We dont have any propositions, sorry</Phrase> :
+        (
+            <GoodsWrapper variant="dark" fade interval={null} activeIndex={activeIndex} onSelect={this.onCarouselSelect}>
+                {goods}
             </GoodsWrapper>
-        ));
+        );
     }
 }
 

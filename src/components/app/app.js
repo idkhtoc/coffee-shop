@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import AppHeader from "./appComponents/appHeader";
 import AppMain from "./appComponents/appMain";
-import Footer from "../footer/footer";
+import { default as AppFooter } from "../footer/footer";
 
 const AppWrapper = styled.div`
     display: flex;
@@ -15,7 +15,7 @@ const App = () => {
         <AppWrapper>
             <AppHeader/>
             <AppMain/>
-            <Footer/>
+            <AppFooter/>
         </AppWrapper>
     );
 }

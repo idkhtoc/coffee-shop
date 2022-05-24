@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './components/app/app';
 import OurCoffee from './components/ourCoffee/ourCoffee';
 import ForPleasure from './components/forPleasure/forPleasure';
+import Good from './components/good/good';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/" element={<App/>} />
       <Route path="/ourcoffee" element={<OurCoffee/>} />
       <Route path="/forpleasure" element={<ForPleasure/>} />
+      <Route path="ourcoffee/good/:goodId" element={<Good />}/>
     </Routes>
   </BrowserRouter>
 );

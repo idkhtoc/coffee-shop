@@ -9,7 +9,7 @@ const AppHeaderWrapper = styled.header`
     width: 100%;
     padding: 30px 150px 200px;
     margin: 0 auto;
-    background: url("./images/app-header-bg.png") fixed no-repeat;
+    background: url("../images/app-header-bg.png") fixed no-repeat;
     background-size: 100%;
 `;
 
@@ -47,8 +47,10 @@ const InfoButton = styled(Link)`
     line-height: 1.25rem;
     color: #fff;
     text-decoration: none;
+    transition: opacity .15s ease;
     &:hover {
-        color: #fff; 
+        color: #fff;
+        opacity: .7;
     }
 `;
 

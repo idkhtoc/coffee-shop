@@ -1,24 +1,20 @@
 import styled from "styled-components";
-
 import { Link } from "react-router-dom";
 
 const Item = styled(Link)`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 22px;
-    height: 240px;
-    width: 27.5%;
-    background: rgba(255, 255, 255, 0.65);
+    padding: 20px;
+    max-width: 220px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    background: #fff;
     border-radius: 8px;
     font-size: .875rem;
     line-height: 1.25rem;
     color: #000;
     text-decoration: none;
     transition: opacity .15s ease;
-    &:not(:nth-child(3n + 1)) {
-        margin-left: 70px;
-    }
     &:hover {
         color: #000;
         opacity: .7;
@@ -26,22 +22,28 @@ const Item = styled(Link)`
 `;
 
 const ItemName = styled.p`
-    margin: 10px 0;
+    margin: 15px 0;
+`;
+
+const ItemCountry = styled.p`
+    margin: 0;
+    text-align: end;
 `;
 
 const ItemPrice = styled.p`
     text-align: end;
     font-weight: 700;
-    margin: 0;
+    margin: 14px 0 0;
 `;
 
 const ItemImg = styled.div`
     text-align: center;
 `;
 
-const OurBestGoodsItem = ({name, src, price, weight, id}) => {
+
+const MainGoodsItem = ({name, src, price, weight, country, id}) => {
     return (
-        <Item to={`/ourcoffee/good/${id}`} >
+        <Item to={`good/${id}`}>
             <ItemImg>
                 <img src={src} alt="Product" />
             </ItemImg>
@@ -49,6 +51,9 @@ const OurBestGoodsItem = ({name, src, price, weight, id}) => {
                 <ItemName>
                     {name + ' ' + weight} kg
                 </ItemName>
+                <ItemCountry>
+                    {country}
+                </ItemCountry>
                 <ItemPrice>
                     {price}$
                 </ItemPrice>
@@ -57,4 +62,4 @@ const OurBestGoodsItem = ({name, src, price, weight, id}) => {
     );
 };
 
-export default OurBestGoodsItem;
+export default MainGoodsItem;
