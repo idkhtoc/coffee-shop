@@ -41,11 +41,11 @@ const GoodsWrapper = styled(Carousel)`
 
 const GoodsItem = styled.div`
     display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: ${props => 'repeat(' + props.goodsLength + ', 220px)'};
+    gap: 20px 70px;
+    justify-content: center;
     justify-items: center;
-    grid-template-columns: ${props => '1fr '.repeat(props.count > 2 ? 3 : props.count)};
-    grid-template-rows: 1fr 1fr;
-    row-gap: 60px;
-    column-gap: 70px;
 `;
 
 const Phrase = styled.p`
@@ -80,56 +80,66 @@ class MainGoods extends Component {
     }
 
     onSearchUpdate = value => {
-        this.setState({value, activeIndex: 0});
+        this.setState({ value, activeIndex: 0 });
     }
 
     onFilterUpdate = filter => {
-        this.setState({filter, activeIndex: 0});
+        this.setState({ filter, activeIndex: 0 });
     }
 
     getGoods = () => {
         this.setState({
-                loading: true
-            }, () => {
-                axios("http://localhost:3000/items")
-                    .then(data => this.setState({
-                        loading: false,
-                        goods: data.data.filter(item => !item.best)
-                                        .map(item => <MainGoodsItem {...item} key={item.id} />)
-                    }))
-                    .catch(error => this.setState({
-                        loading: false,
-                        error: error
-                    }));
-            }
+            loading: true
+        }, () => {
+            axios("http://localhost:3000/items")
+                .then(data => this.setState({
+                    loading: false,
+                    goods: data.data.filter(item => !item.best)
+                        .map(item => <MainGoodsItem {...item} key={item.id} />)
+                }))
+                .catch(error => this.setState({
+                    loading: false,
+                    error: error
+                }));
+        }
         );
     }
 
     renderedGoods = goods => {
-        const elements = [];
+        const elements = [],
+            wrapperSize = document.documentElement.scrollWidth,
+            wrapperLength = Math.floor((wrapperSize * 55.5 / 100) / 270);
 
         let temp = [];
 
         goods.forEach((good, index) => {
             temp.push(good);
-            
-            if ((index + 1) % 6 === 0 || index === goods.length - 1) {
+
+            if (temp.length === wrapperLength * 2) {
                 elements.push(
                     <GoodsWrapper.Item key={index}>
-                        <GoodsItem count={temp.length}>
+                        <GoodsItem goodsLength={wrapperLength}>
                             {temp}
                         </GoodsItem>
                     </GoodsWrapper.Item>
                 );
                 temp = [];
+            } else if (index === goods.length - 1) {
+                elements.push(
+                    <GoodsWrapper.Item key={index}>
+                        <GoodsItem goodsLength={wrapperLength}>
+                            {temp}
+                        </GoodsItem>
+                    </GoodsWrapper.Item>
+                );
             }
         });
 
         return elements;
     }
-    
+
     onCarouselSelect = activeIndex => {
-        this.setState({activeIndex});
+        this.setState({ activeIndex });
     }
 
     componentDidMount() {
@@ -137,29 +147,29 @@ class MainGoods extends Component {
     }
 
     render() {
-        const {loading, goods, error, value, filter, activeIndex} = this.state;
-        
+        const { loading, goods, error, value, filter, activeIndex } = this.state;
+
         const visibleGoods = this.filteredGoods((this.searchedGoods(goods, value)), filter);
 
         return (
             <MainGoodsWrapper>
                 {
                     this.props.filter ? (
-                        <MainGoodsFilter 
+                        <MainGoodsFilter
                             onSearchUpdate={this.onSearchUpdate}
                             onFilterUpdate={this.onFilterUpdate}
                         />
                     ) : ''
                 }
                 {
-                    loading ? <Phrase>Loading...</Phrase> : 
-                    error ? <Phrase>Some problems you have</Phrase> : 
-                    !visibleGoods.join('') ? <Phrase>We dont have any propositions, sorry</Phrase> :
-                    (
-                        <GoodsWrapper variant="dark" fade interval={null} activeIndex={activeIndex} onSelect={this.onCarouselSelect}>
-                            {this.renderedGoods(visibleGoods)}
-                        </GoodsWrapper>
-                    )
+                    loading ? <Phrase>Loading...</Phrase> :
+                        error ? <Phrase>Some problems you have</Phrase> :
+                            !visibleGoods.join('') ? <Phrase>We dont have any propositions, sorry</Phrase> :
+                                (
+                                    <GoodsWrapper variant="dark" fade interval={null} activeIndex={activeIndex} onSelect={this.onCarouselSelect}>
+                                        {this.renderedGoods(visibleGoods)}
+                                    </GoodsWrapper>
+                                )
                 }
             </MainGoodsWrapper>
         );

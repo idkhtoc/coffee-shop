@@ -17,7 +17,8 @@
             "presentSrc": "../../images/presentGoods/good1.jpg", 
             "price": 10.73, 
             "weight": 2,
-            "country": "Brazil", 
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "country": "Brazil",  
             "best": false, 
             "id": 2
         },
@@ -27,6 +28,7 @@
             "presentSrc": "../../images/presentGoods/good1.jpg", 
             "price": 10.73, 
             "weight": 2, 
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "country": "Brazil",
             "best": false, 
             "id": 3
@@ -50,6 +52,7 @@
             "weight": 2,
             "country": "Brazil", 
             "best": false, 
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "id": 5
         },
         {
@@ -59,6 +62,7 @@
             "price": 10.73, 
             "weight": 2, 
             "country": "Brazil",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "best": false, 
             "id": 6
         },
@@ -79,6 +83,7 @@
             "presentSrc": "../../images/presentGoods/good1.jpg", 
             "price": 10.73, 
             "weight": 2,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "country": "Brazil", 
             "best": false, 
             "id": 8
@@ -91,7 +96,85 @@
             "weight": 2, 
             "country": "Brazil",
             "best": false, 
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "id": 9
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": true,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "id": 10
+        }, 
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": true,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            "id": 11
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": true,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            "id": 12
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": true,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            "id": 13
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": true,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            "id": 14
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": true,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            "id": 15
+        },
+        {
+            "name": "Solimo Coffee Beans", 
+            "src": "../../images/goods/good1.png", 
+            "presentSrc": "../../images/presentGoods/good1.jpg", 
+            "price": 10.73, 
+            "weight": 2, 
+            "country": "Brazil",
+            "best": true,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+            "id": 16
         }
     ]
 }

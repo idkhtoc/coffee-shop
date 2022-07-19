@@ -41,9 +41,9 @@ const ItemImg = styled.div`
 `;
 
 
-const MainGoodsItem = ({name, src, price, weight, country, id}) => {
+const MainGoodsItem = ({ name, src, price, weight, country, id }) => {
     return (
-        <Item to={`good/${id}`}>
+        <Item to={`../ourcoffee/good/${id}`}>
             <ItemImg>
                 <img src={src} alt="Product" />
             </ItemImg>

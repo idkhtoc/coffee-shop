@@ -6,26 +6,37 @@ import axios from "axios";
 import OurBestGoodsItem from "./ourBestGoodsItem";
 
 const GoodsWrapper = styled(Carousel)`
-    margin: 40px auto 0;
+    margin: 0 auto;
+    width: 55.5%;
+    .carousel-inner {
+        overflow: visible;
+    }
+    .carousel-item {
+        opacity: 0;
+        transition: opacity .5s ease-in-out !important;
+        &.active {
+            opacity: 1;
+            transition: opacity .1s ease-in-out !important;
+        }
+    }
     .carousel-indicators {
-        margin-bottom: -2rem;
+        margin-bottom: -3rem;
     }
     .carousel-control-next,
     .carousel-control-prev {
         width: 5%;
     }
     .carousel-control-next {
-        right: 15%;
+        right: -15%;
     }
     .carousel-control-prev {
-        left: 15%;
+        left: -15%;
     }
 `;
 
 const GoodsItem = styled.div`
     display: flex;
-    justify-content: center;
-    width: 55.5%;
+    justify-content: space-between;
     margin: 20px auto;
 `;
 
@@ -47,19 +58,19 @@ class OurBestGoods extends Component {
 
     componentDidMount() {
         this.setState({
-                loading: true
-            }, () => {
-                axios("http://localhost:3000/items")
-                    .then(data => this.setState({
-                        loading: false,
-                        items: data.data.filter(item => item.best)
-                                        .map(item => <OurBestGoodsItem {...item}/>)
-                    }))
-                    .catch(error => this.setState({
-                        loading: false,
-                        error: error
-                    }));
-            }
+            loading: true
+        }, () => {
+            axios("http://localhost:3000/items")
+                .then(data => this.setState({
+                    loading: false,
+                    items: data.data.filter(item => item.best)
+                        .map(item => <OurBestGoodsItem {...item} />)
+                }))
+                .catch(error => this.setState({
+                    loading: false,
+                    error: error
+                }));
+        }
         );
     }
 
@@ -70,9 +81,15 @@ class OurBestGoods extends Component {
 
         this.state.items.forEach((item, index) => {
             temp.push(item);
-            
+
             if ((index + 1) % 3 === 0 || index === this.state.items.length - 1) {
-                elements.push(<GoodsWrapper.Item interval={3000}><GoodsItem>{temp}</GoodsItem></GoodsWrapper.Item>);
+                elements.push(
+                    <GoodsWrapper.Item>
+                        <GoodsItem>
+                            {temp}
+                        </GoodsItem>
+                    </GoodsWrapper.Item>
+                );
                 temp = [];
             }
         });
@@ -81,21 +98,21 @@ class OurBestGoods extends Component {
     }
 
     onCarouselSelect = activeIndex => {
-        this.setState({activeIndex});
+        this.setState({ activeIndex });
     }
 
     render() {
-        const {loading, error, activeIndex} = this.state;
+        const { loading, error, activeIndex } = this.state;
         const goods = this.renderItems();
 
-        return loading ? <Phrase>Loading...</Phrase> : 
-               error ? <Phrase>Some problems you have</Phrase> : 
-               !goods.join('') ? <Phrase>We dont have any propositions, sorry</Phrase> :
-        (
-            <GoodsWrapper variant="dark" fade interval={null} activeIndex={activeIndex} onSelect={this.onCarouselSelect}>
-                {goods}
-            </GoodsWrapper>
-        );
+        return loading ? <Phrase>Loading...</Phrase> :
+            error ? <Phrase>Some problems you have</Phrase> :
+                !goods.join('') ? <Phrase>We dont have any propositions, sorry</Phrase> :
+                    (
+                        <GoodsWrapper variant="dark" fade interval={null} activeIndex={activeIndex} onSelect={this.onCarouselSelect}>
+                            {goods}
+                        </GoodsWrapper>
+                    );
     }
 }
 

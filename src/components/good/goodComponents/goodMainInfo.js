@@ -6,7 +6,6 @@ import Separator from "../../separator/separator";
 
 const InfoWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     width: 60%;
 `;
@@ -31,6 +30,10 @@ const InfoTextWrapper = styled.div`
         line-height: 2.1875rem;
         font-weight: 400;
     }
+    p {
+        max-width: 80%;
+        word-break: break-all;
+    }
 `;
 
 const InfoTextTitle = styled.h2`
@@ -50,54 +53,58 @@ class GoodMainInfo extends Component {
             item: '',
             loading: false,
             error: false
-        }
+        };
     }
-    
+
     componentDidMount() {
         this.setState({
             loading: true
         }, () => {
             axios("http://localhost:3000/items")
-                .then(data => this.setState({
-                    loading: false,
-                    item: data.data.find(item => item.id === +window.location.pathname.slice(-1))
-                }))
+                .then(data => {
+                    const location = window.location.pathname;
+
+                    this.setState({
+                        loading: false,
+                        item: data.data.find(item => item.id === +location.slice(location.lastIndexOf('/') + 1))
+                    });
+                })
                 .catch(error => this.setState({
                     loading: false,
                     error: error
                 }));
-        }
-    );
+        });
     }
-    
-    render() {
-        const {presentSrc, price, description, country, name} = this.state.item,
-              {loading, error} = this.state;
 
-        return loading ? <Phrase>Loading...</Phrase> : 
-               error ? <Phrase>Some problems you have</Phrase> : 
-        (
-            <section>
-                <InfoWrapper>
-                    <InfoImgWrapper>
-                        <InfoImg src={presentSrc} alt={name} />
-                    </InfoImgWrapper>
-                    <InfoTextWrapper>
-                        <InfoTextTitle>About it</InfoTextTitle>
-                        <Separator color="black" margin="20px auto 25px" />
-                        <p>
-                            <strong>Country:</strong> {country}
-                        </p>
-                        <p>
-                            <strong>Description:</strong> {description}
-                        </p>
-                        <p>
-                            <strong>Price: </strong> <span>{price}$</span>
-                        </p>
-                    </InfoTextWrapper>
-                </InfoWrapper>
-            </section>
-        );
+    render() {
+        console.log(this.state);
+        const { presentSrc, price, description, country, name } = this.state.item,
+            { loading, error } = this.state;
+
+        return loading ? <Phrase>Loading...</Phrase> :
+            error ? <Phrase>Some problems you have</Phrase> :
+                (
+                    <section>
+                        <InfoWrapper>
+                            <InfoImgWrapper>
+                                <InfoImg src={presentSrc} alt={name} />
+                            </InfoImgWrapper>
+                            <InfoTextWrapper>
+                                <InfoTextTitle>About it</InfoTextTitle>
+                                <Separator color="black" margin="20px auto 25px" />
+                                <p>
+                                    <strong>Country:</strong> {country}
+                                </p>
+                                <p>
+                                    <strong>Description:</strong> {description}
+                                </p>
+                                <p>
+                                    <strong>Price: </strong> <span>{price}$</span>
+                                </p>
+                            </InfoTextWrapper>
+                        </InfoWrapper>
+                    </section>
+                );
     }
 }
 

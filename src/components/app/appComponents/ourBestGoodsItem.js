@@ -16,9 +16,6 @@ const Item = styled(Link)`
     color: #000;
     text-decoration: none;
     transition: opacity .15s ease;
-    &:not(:nth-child(3n + 1)) {
-        margin-left: 70px;
-    }
     &:hover {
         color: #000;
         opacity: .7;
@@ -39,7 +36,7 @@ const ItemImg = styled.div`
     text-align: center;
 `;
 
-const OurBestGoodsItem = ({name, src, price, weight, id}) => {
+const OurBestGoodsItem = ({ name, src, price, weight, id }) => {
     return (
         <Item to={`/ourcoffee/good/${id}`} >
             <ItemImg>
