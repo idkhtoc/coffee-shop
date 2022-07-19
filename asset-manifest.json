@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Coffee-Shop-with-react/static/css/main.f8304cdb.css",
+    "main.js": "/Coffee-Shop-with-react/static/js/main.d007b427.js",
+    "index.html": "/Coffee-Shop-with-react/index.html",
+    "main.f8304cdb.css.map": "/Coffee-Shop-with-react/static/css/main.f8304cdb.css.map",
+    "main.d007b427.js.map": "/Coffee-Shop-with-react/static/js/main.d007b427.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8304cdb.css",
+    "static/js/main.d007b427.js"
+  ]
+}
