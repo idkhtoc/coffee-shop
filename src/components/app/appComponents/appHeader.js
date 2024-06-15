@@ -65,7 +65,7 @@ const AppHeader = () => {
 				<Separator color='white' margin='20px auto 35px' />
 				<div>
 					<InfoText>
-						We makes every day full of energy and taste
+						We make every day full of energy and taste
 					</InfoText>
 					<InfoText>Want to try our beans?</InfoText>
 				</div>
