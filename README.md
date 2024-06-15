@@ -1,6 +1,6 @@
 # [Coffee Shop](https://idkhtoc.github.io/coffee-shop/)
 
-![Overview](https://github.com/idkhtoc/coffee-shop/assets/87912703/5b857267-36ef-4935-89fd-f7031d4eb8c5)
+![Overview](https://github.com/idkhtoc/coffee-shop/assets/87912703/e92d7aaa-8c9d-4073-bed4-ac0fe824db0a)
 
 ## Overview
 
