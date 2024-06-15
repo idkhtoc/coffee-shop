@@ -1,6 +1,8 @@
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { Link } from 'react-router-dom';
+import LogoWhite from '../../assets/logo-white.svg';
+import LogoBlack from '../../assets/logo-black.svg';
 
 const LinksWrapper = styled.nav`
 	width: fit-content;
@@ -24,7 +26,7 @@ const LinksLink = styled(Link)`
 `;
 
 const Links = ({ margin, color }) => {
-	const activeLink = window.location.pathname;
+	const activeLink = useLocation().pathname;
 
 	const links = [
 		{ to: '/', text: 'Coffee house' },
@@ -34,16 +36,14 @@ const Links = ({ margin, color }) => {
 
 	return (
 		<LinksWrapper margin={margin}>
-			<img src={`../../images/logo-${color}.svg`} alt='logo' />
+			<img src={color === 'white' ? LogoWhite : LogoBlack} alt='logo' />
 			{links.map((link) => (
 				<LinksLink
 					to={link.to}
 					color={color}
 					className={activeLink === link.to ? 'active' : ''}
 					key={link.to}
-					onClick={() => {
-						document.documentElement.getBoundingClientRect().top = 0;
-					}}
+					onClick={() => window.scrollTo(0, 0)}
 				>
 					{link.text}
 				</LinksLink>

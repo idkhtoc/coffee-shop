@@ -1,8 +1,12 @@
 import { Component } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
+// import axios from 'axios';
 
 import Separator from '../../separator/separator';
+
+import { items } from '../../../db';
+
+import PresentImg from '../../../assets/presentGoods/good1.jpg';
 
 const InfoWrapper = styled.div`
 	display: flex;
@@ -58,39 +62,47 @@ class GoodMainInfo extends Component {
 	}
 
 	componentDidMount() {
+		const loc = window.location.href.split('/');
+
 		this.setState(
 			{
 				loading: true,
 			},
 			() => {
-				axios('http://localhost:3000/items')
-					.then((data) => {
-						const location = window.location.pathname;
+				// axios('http://localhost:3000/items')
+				// 	.then((data) => {
+				// 		const location = window.location.pathname;
 
-						this.setState({
-							loading: false,
-							item: data.data.find(
-								(item) =>
-									item.id ===
-									+location.slice(
-										location.lastIndexOf('/') + 1
-									)
-							),
-						});
-					})
-					.catch((error) =>
-						this.setState({
-							loading: false,
-							error: error,
-						})
-					);
+				// 		this.setState({
+				// 			loading: false,
+				// 			item: data.data.find(
+				// 				(item) =>
+				// 					item.id ===
+				// 					+location.slice(
+				// 						location.lastIndexOf('/') + 1
+				// 					)
+				// 			),
+				// 		});
+				// 	})
+				// 	.catch((error) =>
+				// 		this.setState({
+				// 			loading: false,
+				// 			error: error,
+				// 		})
+				// 	);
+
+				this.setState({
+					loading: false,
+					item: items.find(
+						(item) => item.id === +loc[loc.length - 1]
+					),
+				});
 			}
 		);
 	}
 
 	render() {
-		const { presentSrc, price, description, country, name } =
-				this.state.item,
+		const { price, description, country, name } = this.state.item,
 			{ loading, error } = this.state;
 
 		return loading ? (
@@ -101,7 +113,7 @@ class GoodMainInfo extends Component {
 			<section>
 				<InfoWrapper>
 					<InfoImgWrapper>
-						<InfoImg src={presentSrc} alt={name} />
+						<InfoImg src={PresentImg} alt={name} />
 					</InfoImgWrapper>
 					<InfoTextWrapper>
 						<InfoTextTitle>About it</InfoTextTitle>

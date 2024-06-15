@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-bootstrap';
-import axios from 'axios';
+// import axios from 'axios';
 
 import OurBestGoodsItem from './ourBestGoodsItem';
+
+import { items } from '../../../db';
 
 const GoodsWrapper = styled(Carousel)`
 	margin: 0 auto;
@@ -62,21 +64,30 @@ class OurBestGoods extends Component {
 				loading: true,
 			},
 			() => {
-				axios('http://localhost:3000/items')
-					.then((data) =>
-						this.setState({
-							loading: false,
-							items: data.data
-								.filter((item) => item.best)
-								.map((item) => <OurBestGoodsItem {...item} />),
-						})
-					)
-					.catch((error) =>
-						this.setState({
-							loading: false,
-							error: error,
-						})
-					);
+				// axios('http://localhost:3000/items')
+				// 	.then((data) =>
+				// 		this.setState({
+				// 			loading: false,
+				// 			items: data.data
+				// 				.filter((item) => item.best)
+				// 				.map((item) => <OurBestGoodsItem {...item} />),
+				// 		})
+				// 	)
+				// 	.catch((error) =>
+				// 		this.setState({
+				// 			loading: false,
+				// 			error: error,
+				// 		})
+				// 	);
+
+				this.setState({
+					loading: false,
+					items: items
+						.filter((item) => item.best)
+						.map((item) => (
+							<OurBestGoodsItem key={item.id} {...item} />
+						)),
+				});
 			}
 		);
 	}
@@ -94,7 +105,7 @@ class OurBestGoods extends Component {
 				index === this.state.items.length - 1
 			) {
 				elements.push(
-					<GoodsWrapper.Item>
+					<GoodsWrapper.Item key={item.key}>
 						<GoodsItem>{temp}</GoodsItem>
 					</GoodsWrapper.Item>
 				);

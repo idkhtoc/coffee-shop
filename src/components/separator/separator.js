@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import SeparatorLogoWhite from '../../assets/separator-logo-white.svg';
+import SeparatorLogoBlack from '../../assets/separator-logo-black.svg';
+
 const SeparatorWrapper = styled.div`
 	display: flex;
 	align-items: center;
@@ -23,7 +26,9 @@ const Separator = ({ color, margin }) => {
 		<SeparatorWrapper margin={margin}>
 			<SeparatorLine color={color} />
 			<SeparatorLogo
-				src={`../../images/separator-logo-${color}.svg`}
+				src={
+					color === 'white' ? SeparatorLogoWhite : SeparatorLogoBlack
+				}
 				alt='logo'
 			/>
 			<SeparatorLine color={color} />

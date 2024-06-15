@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import Links from '../../links/links';
 import Separator from '../../separator/separator';
 
+import AppHeaderBg from '../../../assets/app-header-bg.png';
+
 const AppHeaderWrapper = styled.header`
 	flex: 0 0 auto;
 	width: 100%;
 	padding: 30px 150px 200px;
 	margin: 0 auto;
-	background: url('../images/app-header-bg.png') fixed no-repeat;
+	background: url('${AppHeaderBg}') fixed no-repeat;
 	background-size: 100%;
 `;
 

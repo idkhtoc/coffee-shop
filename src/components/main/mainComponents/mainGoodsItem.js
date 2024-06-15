@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import good1 from '../../../assets/goods/good1.png';
+import good2 from '../../../assets/goods/good2.png';
+import good3 from '../../../assets/goods/good3.png';
+
 const Item = styled(Link)`
 	display: flex;
 	flex-direction: column;
@@ -40,11 +44,16 @@ const ItemImg = styled.div`
 	text-align: center;
 `;
 
-const MainGoodsItem = ({ name, src, price, weight, country, id }) => {
+const images = { good1, good2, good3 };
+
+const MainGoodsItem = ({ name, imgName, price, weight, country, id, best }) => {
 	return (
-		<Item to={`../ourcoffee/good/${id}`}>
+		<Item
+			to={`../ourcoffee/${id}`}
+			style={best ? { border: '2px solid gold' } : {}}
+		>
 			<ItemImg>
-				<img src={src} alt='Product' />
+				<img src={images[imgName]} alt='Product' />
 			</ItemImg>
 			<div>
 				<ItemName>{name + ' ' + weight} kg</ItemName>

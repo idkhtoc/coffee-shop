@@ -4,6 +4,8 @@ import { default as GoodHeader } from '../header/header';
 import GoodMain from './goodComponents/goodMain';
 import { default as GoodFooter } from '../footer/footer';
 
+import OurCoffeeHeaderBg from '../../assets/our-coffee-header-bg.png';
+
 const GoodWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -13,10 +15,7 @@ const GoodWrapper = styled.div`
 const Good = () => {
 	return (
 		<GoodWrapper>
-			<GoodHeader
-				text='Our Coffee'
-				imgSrc='../../images/our-coffee-header-bg.png'
-			/>
+			<GoodHeader text='Our Coffee' imgSrc={OurCoffeeHeaderBg} />
 			<GoodMain />
 			<GoodFooter />
 		</GoodWrapper>

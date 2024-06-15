@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+import AppMainOurBestBg from '../../../assets/app-main-ourbest-bg.png';
+
 import OurBestGoods from './ourBestGoods';
 
 const OurBestWrapper = styled.section`
 	padding: 80px 0 110px;
 	text-align: center;
-	background: url('../images/app-main-ourbest-bg.png') no-repeat;
+	background: url('${AppMainOurBestBg}') no-repeat;
 	background-size: 100%;
 	width: 100%;
 `;

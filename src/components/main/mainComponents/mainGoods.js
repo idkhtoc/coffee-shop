@@ -1,10 +1,12 @@
 import { Component } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
+// import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 
 import MainGoodsFilter from './mainGoodsFilter';
 import MainGoodsItem from './mainGoodsItem';
+
+import { items } from '../../../db';
 
 const MainGoodsWrapper = styled.section`
 	margin: 0 auto;
@@ -96,23 +98,30 @@ class MainGoods extends Component {
 				loading: true,
 			},
 			() => {
-				axios('http://localhost:3000/items')
-					.then((data) =>
-						this.setState({
-							loading: false,
-							goods: data.data
-								.filter((item) => !item.best)
-								.map((item) => (
-									<MainGoodsItem {...item} key={item.id} />
-								)),
-						})
-					)
-					.catch((error) =>
-						this.setState({
-							loading: false,
-							error: error,
-						})
-					);
+				// axios('http://localhost:3000/items')
+				// 	.then((data) =>
+				// 		this.setState({
+				// 			loading: false,
+				// 			goods: data.data
+				// 				.filter((item) => !item.best)
+				// 				.map((item) => (
+				// 					<MainGoodsItem {...item} key={item.id} />
+				// 				)),
+				// 		})
+				// 	)
+				// 	.catch((error) =>
+				// 		this.setState({
+				// 			loading: false,
+				// 			error: error,
+				// 		})
+				// 	);
+
+				this.setState({
+					loading: false,
+					goods: items.map((item) => (
+						<MainGoodsItem {...item} key={item.id} />
+					)),
+				});
 			}
 		);
 	};
