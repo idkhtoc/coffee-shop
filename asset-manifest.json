@@ -1,13 +1,27 @@
 {
   "files": {
-    "main.css": "/Coffee-Shop-with-react/static/css/main.f8304cdb.css",
-    "main.js": "/Coffee-Shop-with-react/static/js/main.d007b427.js",
-    "index.html": "/Coffee-Shop-with-react/index.html",
-    "main.f8304cdb.css.map": "/Coffee-Shop-with-react/static/css/main.f8304cdb.css.map",
-    "main.d007b427.js.map": "/Coffee-Shop-with-react/static/js/main.d007b427.js.map"
+    "main.css": "/coffee-shop/static/css/main.09691589.css",
+    "main.js": "/coffee-shop/static/js/main.e5d8cc2d.js",
+    "static/media/app-main-ourbest-bg.png": "/coffee-shop/static/media/app-main-ourbest-bg.486ec06d60799c4a496a.png",
+    "static/media/app-header-bg.png": "/coffee-shop/static/media/app-header-bg.6e2d96a3fe0e8189057c.png",
+    "static/media/for-pleasure-header-bg.png": "/coffee-shop/static/media/for-pleasure-header-bg.bf3aa2137f80ed1f2354.png",
+    "static/media/our-coffee-header-bg.png": "/coffee-shop/static/media/our-coffee-header-bg.d43d55ac322d630e2df2.png",
+    "static/media/good1.jpg": "/coffee-shop/static/media/good1.24a8d8a3634bb0ac7169.jpg",
+    "static/media/our-coffee-main-info.png": "/coffee-shop/static/media/our-coffee-main-info.65e20e63dc033fdf18d9.png",
+    "static/media/for-pleasure-main-info.png": "/coffee-shop/static/media/for-pleasure-main-info.9c1f2ea170e5e7bfcbc9.png",
+    "static/media/good3.png": "/coffee-shop/static/media/good3.dcb91dcba4b6b965f048.png",
+    "static/media/good1.png": "/coffee-shop/static/media/good1.93b7ca5e4837fd856f71.png",
+    "static/media/good2.png": "/coffee-shop/static/media/good2.eac7a0065dc6e158d889.png",
+    "static/media/logo-white.svg": "/coffee-shop/static/media/logo-white.e3cc4ee7a050ee537f515e3f6c7f1291.svg",
+    "static/media/logo-black.svg": "/coffee-shop/static/media/logo-black.37a14a85b1c50840d1193473bf4207a0.svg",
+    "static/media/separator-logo-white.svg": "/coffee-shop/static/media/separator-logo-white.7ca92b3c63c75d3fc8d9efb28b73c6e0.svg",
+    "static/media/separator-logo-black.svg": "/coffee-shop/static/media/separator-logo-black.27640d1972fe8173ca930bf0af6aacb9.svg",
+    "index.html": "/coffee-shop/index.html",
+    "main.09691589.css.map": "/coffee-shop/static/css/main.09691589.css.map",
+    "main.e5d8cc2d.js.map": "/coffee-shop/static/js/main.e5d8cc2d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8304cdb.css",
-    "static/js/main.d007b427.js"
+    "static/css/main.09691589.css",
+    "static/js/main.e5d8cc2d.js"
   ]
 }
