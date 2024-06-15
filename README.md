@@ -1,5 +1,31 @@
-This app provides a website for coffee selling. 
-To start project write this in console:
-1. npm i
-2. json-server src/db.json
-3. npm start ( Then agree with port changing )
+# [Coffee Shop](https://idkhtoc.github.io/coffee-shop/)
+
+## Overview
+
+Coffee Shop is a website built with React for selling coffee beans and more.
+
+## Features
+
+-   **Filter, search and choose coffee to buy**
+-   **Nice looking sliders and design**
+-   **Multiple pages**
+
+## Installation
+
+1. Clone the repository: `git clone https://github.com/idkhtoc/coffee-shop.git`
+2. Navigate to the project directory: `cd coffee-shop`
+3. Install dependencies: `npm install`
+5. Start: `npm run start`
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions, bug fixes, or new features to add, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please contact me via email: oleksandr.yanov.eu@gmail.com.
+
