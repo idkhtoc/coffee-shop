@@ -27,7 +27,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"server": "json-server src/db.json"
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
