@@ -1,7 +1,10 @@
 {
 	"name": "coffee-shop",
-	"version": "0.1.0",
+	"version": "1.0.0",
+	"description": "Coffee Shop is a website built with React for selling coffee beans and more.",
 	"private": true,
+	"main": "index.js",
+	"contributors": [],
 	"author": {
 		"name": "Oleksandr Yanov",
 		"email": "oleksandr.yanov.eu@gmail.com",
