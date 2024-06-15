@@ -1,0 +1,178 @@
+export const items = [
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		best: false,
+		id: 12312412123,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		country: 'Brazil',
+		best: false,
+		id: 246543645,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		country: 'Brazil',
+		best: false,
+		id: 957893,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		country: 'Kenya',
+		description:
+			'AsodadsdakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxsakdopppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppS',
+		best: false,
+		id: 234587281,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: false,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 9203589025,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		best: false,
+		id: 243578659857546,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		description:
+			'AsodadsdakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxsakdopppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppS',
+		best: false,
+		id: 4425346547356,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		country: 'Brazil',
+		best: false,
+		id: 745686547,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: false,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 42362453657,
+	},
+	{
+		name: 'Presto Coffee Beans',
+		imgName: 'good2',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: true,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 2346586798,
+	},
+	{
+		name: 'Mix Coffee Beans',
+		imgName: 'good3',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: true,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 23452345532451,
+	},
+	{
+		name: 'Mix Coffee Beans',
+		imgName: 'good3',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: true,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 65487568736,
+	},
+	{
+		name: 'Presto Coffee Beans',
+		imgName: 'good2',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: true,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 487254823453425,
+	},
+	{
+		name: 'Solimo Coffee Beans',
+		imgName: 'good1',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: true,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 452346465768,
+	},
+	{
+		name: 'Presto Coffee Beans',
+		imgName: 'good2',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: true,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 5435234523453453,
+	},
+	{
+		name: 'Mix Coffee Beans',
+		imgName: 'good3',
+		price: 10.73,
+		weight: 2,
+		country: 'Brazil',
+		best: true,
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		id: 4569870923453457,
+	},
+];
