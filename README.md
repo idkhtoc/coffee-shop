@@ -1,5 +1,7 @@
 # [Coffee Shop](https://idkhtoc.github.io/coffee-shop/)
 
+![Overview](https://github.com/idkhtoc/coffee-shop/assets/87912703/5b857267-36ef-4935-89fd-f7031d4eb8c5)
+
 ## Overview
 
 Coffee Shop is a website built with React for selling coffee beans and more.
